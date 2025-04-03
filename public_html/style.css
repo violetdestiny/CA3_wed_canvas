@@ -1,0 +1,151 @@
+body {
+    width: 100%;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+header {
+    background-color: #E6A1D7;
+    padding: 15px 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+button {
+    background-color: #74006F;
+    width: 220px;
+    height: 50px;
+    margin: 5px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.ia_logo img {
+    width: 50px;
+    height: 50px;
+}
+#ia_scribbleCanvas{
+    display:flex;
+
+}
+h1 {
+    flex-grow: 1; 
+    color: #1B7979;
+float: left;
+display: flex;
+margin-left: 150px;
+}
+p{
+        background-color: #F2C75B;
+}
+#ia_optionsMenu{
+    margin: 10px;
+    padding: 10px;
+    background-color: #F2C75B;
+    width:570px;
+    height:540px;
+    border: transparent;
+    border-radius: 35px;
+    margin-top: 20px;
+    
+        margin-left: 70px;
+    margin-right:20px;
+    margin-top: 20px;
+}
+input[type="text"]{
+    padding:10px;
+    border-radius:25px;
+    width:200px;
+    height:30px;
+}
+input {
+    border-radius: 25px;
+    color: #91AEC4;
+    border: transparent;
+    padding: 5px;
+}
+#ia_textColorPicker{
+    
+}
+#ia_range{
+     background-color: #F1A5AD;   
+     border-radius: 35px;
+     padding: 10px;
+}
+#ia_slider{
+       background-color: white;   
+     border-radius: 35px;
+     padding: 10px;
+     display:flex;
+}
+#ia_sliderMod{
+   
+        background-color: #E6A1D7;
+    margin: 5px;
+    color: white;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 25px;
+}
+#ia_fontSelector{
+    background-color: #74006F;
+    margin: 5px;
+    color: white;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+#ia_canvas{
+    border:1px solid black;
+    width:600px;
+    height:600px;
+    top: 50px;
+    left: 500px;
+
+    margin-left: 100px;
+    margin-right:20px;
+    margin-top: 20px;
+    border: transparent;
+    border-radius: 25px;
+    background-color: white;
+}
+
+.ia_header-buttons button:hover {
+    background-color: #F1A5AD;
+      cursor: pointer;
+
+}
+/*#ia_brushThicknessSlider{
+ background-color: #74006F;
+  width: 100px;
+    align-content: center;
+}*/
+
+.ia_canvasContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: #61346B;
+}
+
+footer {
+    background-color: #E6A1D7;
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+}
+
+@media only screen and (min-width: 992px) {
+  body {
+    font-size: 16px;
+    width: 100%;
+    margin: auto;
+  }
+}
+

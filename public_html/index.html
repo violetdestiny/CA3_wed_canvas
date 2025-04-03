@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Destiny_Editer</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+        <script src="javascript_ia/ia_CA3.js" type="text/javascript"></script>
+        
+    </head>
+    <header>
+        <h1>Destiny_Editer</h1>
+        <div class="ia_logo">
+            <img src="images/girl.png" alt="Logo"> 
+        </div>
+        <div class="ia_header_buttons">
+            <button id="ia_savefile"><input type="file" name="myImage" accept="image/*" onchange="addImage(this.value.split(/(\\|\/)/g).pop())"/></button>
+            <button> <a id="saveImageFile" download="image.png" onclick="this.href = canvas.toDataURL('image/png')">Save Image</a></button>
+            <button id="deleteButton" onclick="deleteImage()">Delete Image</button> 
+        </div>
+
+    </header>
+    <body>
+        <div class="ia_canvasContainer">
+            <canvas id="ia_canvas"></canvas>
+            <canvas id="ia_scribbleCanvas" style="position:absolute;left:0;top:0;"></canvas>
+
+            <div id="ia_optionsMenu">
+                <p>
+               
+                <button onclick="moveImageToFront()">Move Image Front</button>
+                <button onclick="moveImageToBack()">Move Image Back</button>
+                <input type="text" id="ia_textInput" placeholder="Enter text here">
+                <button onclick="addText()">Add Text</button>
+                <button onclick="deleteText();addText()">Delete Text</button>
+                <input type="color" id="ia_textColorPicker" value="#ffffff" onchange="changeTextColor()">
+                <label>Masked</label><input type  = "checkbox" value = "false" onchange="toggleProperty('isMasked')">
+            
+                <select id="ia_fontSelector" onchange="changeTextFont()">
+                    <option value="Arial">Arial</option>
+                    <option value="Serif">Serif</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Courier New">Courier New</option>
+
+                </select>
+
+                <p id="ia_slider">
+                    <input type="checkbox" id="ia_scribbleCheckbox" onchange="enableScribble(this)"/> <label for="ia_scribbleCheckbox">Enable Scribble</label> 
+                    <br>
+                    <input type="range" id="ia_brushThicknessSlider" min="1" max="100" value="10" onchange="radiusSize(this.value)">
+               <label> color picker </label>   <input  type="color" id="ia_textColorPicker" value="#ffffff" onchange="changeTextColor()">
+                    <input type="button" value="erase scribble.." onclick="eraseScribble()"/><br>
+                </p>
+              
+            </div>
+
+            <div id="ia_sliderMod">
+                     <p>
+                    <label>Rotation</label> <input type="range"  value="0" min="-255" max="255" onchange = "setProperty('rotation', this.value)"/>
+                    <label>Brightness</label> <input type="range"  value="0" min="-255" max="255" onchange = "setProperty('brightnessLevel', this.value)"/>
+                    <label>Transparency</label> <input type="range" id="ia_transparency" value="1" min="0" max="1" step="0.01"  onchange = "setProperty('transparencyLevel', this.value)"/>
+                    <label>Red Hue:</label><input type="range" id="ia_redSlider" min="-255" max="255" value="0" onchange="imageHue()">
+                    <label>Blue Hue:</label><input type="range" id="ia_blueSlider" min="-255" max="255" value="0" onchange="imageHue()">
+                    <label>Green Hue:</label><input type="range" id="ia_greenSlider" min="-255" max="255" value="0" onchange="imageHue()">
+                </p>
+                <label>Invert</label><input type  = "checkbox" id="ia_invert" value = "false" onchange="toggleProperty('isInverted')">
+                <label>B&W</label><input type = "checkbox" value = "false" onchange="toggleProperty('isBlackAndWhite')">
+                <label>Sepia</label><input type = "checkbox" value = "false" onchange="toggleProperty('isSepia')">
+                <label>Threshold</label><input type  = "checkbox" value = "false" onchange="toggleProperty('isThreshold')">
+                <label>Posterise</label><input type  = "checkbox" value = "false" onchange="toggleProperty('isPosterise')"><br>
+
+                <label>Emboss</label><input type  = "checkbox" value = "false" onchange="toggleProperty('isEmbossed')">
+                <label>Edge Detection</label><input type  = "checkbox" value = "false" onchange="toggleProperty('hasedgeDetection')">
+                <label>Blur</label><input type  = "checkbox" value = "false" onchange="toggleProperty('isBlur')">
+                <label>Sharpness</label><input type  = "checkbox" value = "false" onchange="toggleProperty('isSharpen')">
+                </div>
+
+        </div>
+    </body>
+   <footer>
+       <h2> Edit your destiny ;) </h2>
+    </footer>
+</html>
