@@ -22,7 +22,7 @@ Clone the repo:
 
 bash
 Copy
-git clone https://github.com/violetdestiny/Destiny_Editer.git  
+git clone [https://github.com/violetdestiny/Destiny_Editer.git  ](https://github.com/violetdestiny/CA3_wed_canvas)
 Open index.html in any modern browser.
 (That’s it! No APIs, no dependencies.)
 
