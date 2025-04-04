@@ -22,7 +22,7 @@ Clone the repo:
 
 bash
 Copy
-git clone https://github.com/[yourusername]/Destiny_Editer.git  
+git clone https://github.com/violetdestiny/Destiny_Editer.git  
 Open index.html in any modern browser.
 (That’s it! No APIs, no dependencies.)
 
